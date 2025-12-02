@@ -33,8 +33,8 @@ This repository provides a Python-based pipeline for **radiomics feature extract
 1. Clone the repository:
 
 ```bash
-git clone <repository_url>
-cd <repository_directory>
+git clone https://github.com/Zhao-Jianan/Radiomics-pipeline.git
+cd Radiomics-pipeline
 ```
 
 2. Create and activate a Python environment:
