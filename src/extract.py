@@ -64,6 +64,8 @@ def shape_features(mask_img: sitk.Image) -> Dict[str, float]:
     Returns:
         Dict[str, float]: Dictionary of shape features.
     """
+    if mask_img.GetPixelID() != sitk.sitkUInt8:
+        mask_img = sitk.Cast(mask_img, sitk.sitkUInt8)
     stats = sitk.LabelShapeStatisticsImageFilter()
     stats.Execute(mask_img)
     feats = {}
